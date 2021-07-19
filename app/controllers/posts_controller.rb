@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   def create
     post = Post.create(content: params[:content])
     # redirect_to action: :index  ← 同期通信の記述
-    render json:{ post: post }　#　← 非同期通信の記述
+    render json:{ post: post }
+    #←非同期通信の記述
   end
 end
